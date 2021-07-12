@@ -1,0 +1,34 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	ios_base::sync_with_stdio(false); cin.tie(NULL);
+#ifndef ONLINE_JUDGE
+	freopen("input.txt", "r", stdin);
+	freopen("output.txt", "w", stdout);
+#endif
+	int long x, n;
+	cin >> n >> x;
+	int long product[n];
+	int long price = 0;
+	for (int long i = 0; i < n; i++)
+	{
+		cin >> product[i];
+	}
+	for (int long i = 0; i < n; i++)
+	{
+		if (i % 2 == 0)
+		{
+			price += product[i];
+		}
+		else
+		{
+			price += product[i] - 1;
+		}
+	}
+	if (x >= price) cout << "Yes";
+	else
+	{
+		cout << "No";
+	}
+}
